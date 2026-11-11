@@ -1,0 +1,16 @@
+// Flexbox төвлөрүүлэх mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Responsive breakpoint mixin (Хэмжээ тохируулах)
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 769px) { @content; }
+  }
+}
