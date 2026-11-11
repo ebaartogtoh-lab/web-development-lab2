@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 6 - CSS3 Animation & Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">MyWebsite</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        
+        <nav class="nav-links">
+            <a href="#home">Нүүр</a>
+            <a href="#about">Бидний тухай</a>
+            <a href="#services">Үйлчилгээ</a>
+            <a href="#contact">Холбоо барих</a>
+        </nav>
+        <button id="theme-toggle-btn">Dark</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Mobile-First Responsive Вэб Хуудас</h1>
+            <p>Энэхүү вэб хуудас нь гар утас, таблет, компьютерт автоматаар зохицон харагдана.</p>
+            <a href="#services" class="btn">Илүү ихийг үзэх</a>
+        </div>
+    </section>
+
+    <!-- Main Content / Cards Section (Stagger Animation-тай) -->
+    <main class="container" id="services">
+        <h2>Бидний Үйлчилгээ</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Веб Дизайн</h3>
+                <p>Хэрэглэгчдэд ээлтэй, орчин үеийн UX/UI дизайн.</p>
+            </div>
+            <div class="card">
+                <h3>Responsive Хөгжүүлэлт</h3>
+                <p>Бүх төрлийн төхөөрөмж дээр ямар ч скрол үүсгэлгүй ажиллана.</p>
+            </div>
+            <div class="card">
+                <h3>SEO Оновчлол</h3>
+                <p>Хайлтын системд өндөр зэрэглэлтэй харагдах бүтэц.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3D Flip Card (Лаб 6 шаардлага) -->
+    <section class="flip-card-section">
+        <h2>3D Flip Card Эффект</h2>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>Нүүр тал (Дээгүүр нь хулгана аваарай)</p>
+                </div>
+                <div class="flip-card-back">
+                    <p>Ар тал: 3D Transform амжилттай!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multimedia & SVG (Лаб 6 шаардлага) -->
+    <section class="multimedia-section">
+        <h2>Мультимедиа ба SVG</h2>
+        <div class="media-box">
+            <video controls width="300" style="border-radius: 8px;">
+                <source src="video/clip.mp4" type="video/mp4">
+                Таны хөтөч видео дэмжихгүй байна.
+            </video>
+        </div>
+        <div class="media-box">
+            <svg width="100" height="100" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke="var(--primary-color)" stroke-width="3" fill="#ffeb3b" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Лаборатори 6 - Responsive & Animation</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
