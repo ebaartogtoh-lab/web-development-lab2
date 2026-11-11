@@ -1,18 +1,25 @@
-// Dark mode товчлуурын үйлдэл
-const themeBtn = document.getElementById('theme-toggle-btn');
-themeBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    if (currentTheme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        themeBtn.textContent = 'Dark';
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeBtn.textContent = 'Light';
-    }
-});
+document.addEventListener('DOMContentLoaded', () => {
+    // Dark Mode Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    
+    document.documentElement.setAttribute('data-theme', savedTheme);
 
-// Stagger effect динамикаар олгох
-const cards = document.querySelectorAll('.card');
-cards.forEach((card, index) => {
-    card.style.setProperty('--delay', `${index * 0.2}s`);
+    themeBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+
+    // Mobile / Touch Flip Card Logic
+    const flipBtns = document.querySelectorAll('.flip-btn');
+    flipBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const card = btn.closest('.flip-card');
+            card.classList.toggle('flipped');
+        });
+    });
 });
