@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="mn" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб 8 - Tailwind CSS Responsive Portal</title>
+    <!-- Tailwind CSS Output File -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header & Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-2 font-bold text-lg">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                    <circle cx="12" cy="12" r="10" fill="#0d6efd"/>
+                    <path d="M8 12l3 3 5-5" stroke="#ffffff" stroke-width="2" fill="none"/>
+                </svg>
+                <span>Оюутны Портал (Tailwind)</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#hero" class="hover:text-brand">Нүүр</a>
+                <a href="#gallery" class="hover:text-brand">Цомог (3D Flip)</a>
+                <a href="#media" class="hover:text-brand">Мультимедиа</a>
+                <button id="theme-toggle" class="border border-gray-300 dark:border-gray-600 px-3 py-1 rounded text-sm">🌙 Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-brand text-white text-center py-20 px-4" style="background-color: #0d6efd;">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl font-extrabold mb-4">Tailwind CSS Animation & Multimedia</h1>
+            <p class="text-lg mb-6">Лаборатори 8: Tailwind CSS фреймворк ашиглан хөгжүүлсэн нэг хуудас.</p>
+            <a href="#gallery" class="bg-white text-blue-600 font-bold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">Цомог Үзэх</a>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- 3D Flip Card Gallery Section -->
+        <section id="gallery" class="mb-16">
+            <h2 class="text-2xl font-bold text-center mb-8">Хичээлүүдийн Цомог (3D Flip Cards)</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="flip-card h-80 perspective-1000">
+                    <div class="flip-card-inner relative w-full h-full text-center transition-transform duration-700" style="transform-style: preserve-3d;">
+                        <div class="flip-card-front absolute inset-0 bg-white dark:bg-gray-800 p-4 rounded-lg shadow flex flex-col justify-between" style="backface-visibility: hidden;">
+                            <img src="img/photo1.jpg" alt="Вэб Зохиомж" class="w-full h-40 object-cover rounded mb-2" onerror="this.src='https://via.placeholder.com/300x180?text=Web+Design'">
+                            <h3 class="font-bold text-lg mt-2">Вэб Зохиомж</h3>
+                        </div>
+                        <div class="flip-card-back absolute inset-0 bg-blue-600 text-white p-4 rounded-lg shadow flex flex-col justify-center items-center" style="backface-visibility: hidden; transform: rotateY(180deg);">
+                            <h3 class="font-bold text-lg mb-2">HTML5 & CSS3</h3>
+                            <p class="text-sm mb-4">Вэб хуудасны бүтэц, хэв заагч болон responsive дизайны үндэс.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flip-card h-80 perspective-1000">
+                    <div class="flip-card-inner relative w-full h-full text-center transition-transform duration-700" style="transform-style: preserve-3d;">
+                        <div class="flip-card-front absolute inset-0 bg-white dark:bg-gray-800 p-4 rounded-lg shadow flex flex-col justify-between" style="backface-visibility: hidden;">
+                            <img src="img/photo2.jpg" alt="Програмчлал" class="w-full h-40 object-cover rounded mb-2" onerror="this.src='https://via.placeholder.com/300x180?text=Programming'">
+                            <h3 class="font-bold text-lg mt-2">Програмчлал</h3>
+                        </div>
+                        <div class="flip-card-back absolute inset-0 bg-blue-600 text-white p-4 rounded-lg shadow flex flex-col justify-center items-center" style="backface-visibility: hidden; transform: rotateY(180deg);">
+                            <h3 class="font-bold text-lg mb-2">JavaScript</h3>
+                            <p class="text-sm mb-4">Хувьсагч, нөхцөл, давталт болон функцийн үндсийг сурна.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flip-card h-80 perspective-1000">
+                    <div class="flip-card-inner relative w-full h-full text-center transition-transform duration-700" style="transform-style: preserve-3d;">
+                        <div class="flip-card-front absolute inset-0 bg-white dark:bg-gray-800 p-4 rounded-lg shadow flex flex-col justify-between" style="backface-visibility: hidden;">
+                            <img src="img/photo3.jpg" alt="Өгөгдлийн бааз" class="w-full h-40 object-cover rounded mb-2" onerror="this.src='https://via.placeholder.com/300x180?text=Database'">
+                            <h3 class="font-bold text-lg mt-2">Өгөгдлийн бааз</h3>
+                        </div>
+                        <div class="flip-card-back absolute inset-0 bg-blue-600 text-white p-4 rounded-lg shadow flex flex-col justify-center items-center" style="backface-visibility: hidden; transform: rotateY(180deg);">
+                            <h3 class="font-bold text-lg mb-2">SQL бааз</h3>
+                            <p class="text-sm mb-4">Хүснэгт, холбоос болон SQL асуулгын талаар судална.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multimedia Section -->
+        <section id="media" class="mb-10">
+            <h2 class="text-2xl font-bold text-center mb-8">Мультимедиа Хэсэг</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- HTML5 Video -->
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                    <h3 class="font-bold mb-3">Видео Хичээл</h3>
+                    <video controls class="w-full rounded">
+                        <source src="video/clip.mp4" type="video/mp4">
+                        Таны хөтөч видеог дэмжихгүй байна.
+                    </video>
+                </div>
+
+                <!-- Embedded Iframe -->
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                    <h3 class="font-bold mb-3">Embedded Iframe</h3>
+                    <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+                        <iframe class="absolute inset-0 w-full h-full rounded" src="https://www.youtube.com/embed/SVrYv7B351M" title="YouTube video player" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <p>&copy; Оюутны Портал. Лаборатори 8 (Tailwind CSS).</p>
+    </footer>
+
+    <!-- Custom Style for Flip Effect & Hover -->
+    <style>
+        .perspective-1000 { perspective: 1000px; }
+        .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+    </style>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                this.textContent = '🌙 Theme';
+            } else {
+                html.classList.add('dark');
+                this.textContent = '☀️ Theme';
+            }
+        });
+    </script>
+</body>
+</html>
