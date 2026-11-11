@@ -199,10 +199,10 @@ body {
 
 .flip-card-front img {
     width: 100%;
-    height: 170px;
+    height: 140px;
     object-fit: cover;
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .flip-card-back {
